@@ -8,7 +8,9 @@ const data = {
             description: "International competition for creating short videos using AI",
             tags: ["Video", "AI", "Competition"],
             prize: "$10,000",
-            deadline: "2024-05-15"
+            deadline: "2024-05-15",
+            platform: "Kaggle",
+            location: "Online"
         },
         {
             id: 2,
@@ -17,7 +19,9 @@ const data = {
             description: "Create a series of artistic images using AI",
             tags: ["Images", "AI", "Art"],
             prize: "$5,000",
-            deadline: "2024-04-30"
+            deadline: "2024-04-30",
+            platform: "Devpost",
+            location: "San Francisco, CA"
         }
     ],
     challenges: [
@@ -27,7 +31,9 @@ const data = {
             date: "2024-04-10",
             description: "Create a short animation using AI tools",
             tags: ["Animation", "AI", "Challenge"],
-            duration: "30 days"
+            duration: "30 days",
+            platform: "Discord Community",
+            location: "Online"
         }
     ],
     calls: [
@@ -37,7 +43,9 @@ const data = {
             date: "2024-04-05",
             description: "Looking for artists to work on a new AI project",
             tags: ["Project", "AI", "Opportunity"],
-            type: "Collaboration"
+            type: "Collaboration",
+            platform: "LinkedIn",
+            location: "Remote"
         }
     ]
 };
@@ -51,6 +59,10 @@ function createCard(item, type) {
         <h3>${item.title}</h3>
         <div class="date">Date: ${formatDate(item.date)}</div>
         <div class="description">${item.description}</div>
+        <div class="platform-location">
+            <div class="platform"><i class="fas fa-globe"></i> Platform: ${item.platform}</div>
+            <div class="location"><i class="fas fa-map-marker-alt"></i> Location: ${item.location}</div>
+        </div>
         <div class="tags">
     `;
     

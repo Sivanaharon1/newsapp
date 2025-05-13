@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #2c3e50;
+    --primary-color: #800020;  /* Burgundy color */
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
     --background-color: #f5f6fa;
@@ -66,6 +66,7 @@ nav {
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .content-section {
@@ -110,6 +111,25 @@ nav {
 
 .card .description {
     margin-bottom: 1rem;
+}
+
+.platform-location {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: rgba(128, 0, 32, 0.05);
+    border-radius: 4px;
+}
+
+.platform-location .platform,
+.platform-location .location {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.platform-location i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
 }
 
 .card .tags {
