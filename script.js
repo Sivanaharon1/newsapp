@@ -1,5 +1,39 @@
 // Sample data structure for competitions, challenges, and calls to action
 const data = {
+    news: [
+        {
+            id: 1,
+            title: "OpenAI Announces GPT-5 Development",
+            date: "2024-03-15",
+            description: "OpenAI has begun development of GPT-5, promising significant improvements in reasoning and safety.",
+            source: "AITrends",
+            url: "https://aitrends.com/gpt5"
+        },
+        {
+            id: 2,
+            title: "Google Launches Gemini Pro 1.5",
+            date: "2024-03-14",
+            description: "Google's latest AI model shows remarkable improvements in multimodal capabilities.",
+            source: "AITrends",
+            url: "https://aitrends.com/gemini"
+        },
+        {
+            id: 3,
+            title: "AI in Marketing: 2024 Trends Report",
+            date: "2024-03-13",
+            description: "New report reveals how AI is transforming marketing strategies across industries.",
+            source: "Marketing AI Institute",
+            url: "https://marketingaiinstitute.com/trends"
+        },
+        {
+            id: 4,
+            title: "The Future of AI-Powered Customer Experience",
+            date: "2024-03-12",
+            description: "How AI is revolutionizing customer service and personalization in marketing.",
+            source: "Marketing AI Institute",
+            url: "https://marketingaiinstitute.com/cx"
+        }
+    ],
     competitions: [
         {
             id: 1,
@@ -49,6 +83,63 @@ const data = {
         }
     ]
 };
+
+let currentNewsIndex = 0;
+
+function createNewsItem(news) {
+    const newsItem = document.createElement('div');
+    newsItem.className = 'news-item';
+    newsItem.innerHTML = `
+        <h3>${news.title}</h3>
+        <div class="news-meta">
+            <span>${formatDate(news.date)}</span>
+            <span>${news.source}</span>
+        </div>
+        <p class="description">${news.description}</p>
+        <a href="${news.url}" target="_blank" rel="noopener noreferrer">Read more →</a>
+    `;
+    return newsItem;
+}
+
+function showNewsItem(index) {
+    const newsContent = document.getElementById('news-content');
+    const newsItems = newsContent.getElementsByClassName('news-item');
+    
+    // Remove active class from all items
+    Array.from(newsItems).forEach(item => item.classList.remove('active'));
+    
+    // Add active class to current item
+    newsItems[index].classList.add('active');
+}
+
+function nextNews() {
+    currentNewsIndex = (currentNewsIndex + 1) % data.news.length;
+    showNewsItem(currentNewsIndex);
+}
+
+function prevNews() {
+    currentNewsIndex = (currentNewsIndex - 1 + data.news.length) % data.news.length;
+    showNewsItem(currentNewsIndex);
+}
+
+function populateNews() {
+    const newsContainer = document.getElementById('news-container');
+    newsContainer.innerHTML = '';
+    data.news.forEach(news => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+            <h3>${news.title}</h3>
+            <div class="news-meta">
+                <span>${formatDate(news.date)}</span>
+                <span>${news.source}</span>
+            </div>
+            <div class="description">${news.description}</div>
+            <a href="${news.url}" target="_blank" rel="noopener noreferrer" class="read-more">Read more →</a>
+        `;
+        newsContainer.appendChild(card);
+    });
+}
 
 // Function to create a card element
 function createCard(item, type) {
@@ -113,6 +204,8 @@ function populateContainers() {
     data.calls.forEach(call => {
         callsContainer.appendChild(createCard(call, 'call'));
     });
+    
+    populateNews();
 }
 
 // Initialize the application
