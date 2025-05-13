@@ -3,35 +3,35 @@ const data = {
     news: [
         {
             id: 1,
-            title: "Google Gemini Takes Personalization to the Next Level",
-            date: "2024-03-13",
-            description: "Google's latest update to the Gemini app introduces groundbreaking personalization features that promise to make Gemini a tailored extension of its users.",
-            source: "1redDrop",
-            url: "https://1reddrop.com/2025/03/13/google-gemini-takes-personalization-to-the-next-level-a-game-changer-in-ai-technology/"
+            title: "May 2025 Artist Funding Opportunities",
+            date: "2025-05-01",
+            description: "Major funding opportunities announced for AI artists and creators, with grants totaling over $1 million available for innovative projects.",
+            source: "AI Art News",
+            url: "https://aiartnews.com/2025/05/01/may-2025-artist-funding-opportunities/"
         },
         {
             id: 2,
-            title: "Honor's $10 Billion AI Investment",
-            date: "2024-03-02",
-            description: "Chinese smartphone manufacturer Honor announces a $10 billion investment in artificial intelligence over the next five years, signaling a transition to an AI device ecosystem company.",
-            source: "1redDrop",
-            url: "https://1reddrop.com/2025/03/02/honors-10-billion-ai-gamble-a-bold-leap-or-a-risky-bet/"
+            title: "AI Film Festival 2025 Opens Submissions",
+            date: "2025-05-05",
+            description: "The annual AI Film Festival announces its call for submissions, featuring new categories for AI-assisted filmmaking and virtual production.",
+            source: "AI Film Network",
+            url: "https://aifilmnetwork.com/2025/05/05/ai-film-festival-2025-submissions/"
         },
         {
             id: 3,
-            title: "Anthropic's $61.5 Billion Valuation",
-            date: "2024-03-03",
-            description: "Anthropic, an Amazon-backed AI startup, secures $3.5 billion in funding, reaching a $61.5 billion valuation, intensifying the AI arms race.",
-            source: "1redDrop",
-            url: "https://1reddrop.com/2025/03/03/anthropics-61-5-billion-valuation-the-ai-arms-race-intensifies/"
+            title: "MetaDisruption AI International Festival",
+            date: "2025-05-10",
+            description: "Global festival showcasing the intersection of AI, art, and design, featuring workshops, exhibitions, and networking opportunities.",
+            source: "MetaDisruption",
+            url: "https://metadisruption.com/2025/05/10/ai-festival-2025/"
         },
         {
             id: 4,
-            title: "Discord's Social SDK Revolution",
-            date: "2024-03-17",
-            description: "Discord unveils its groundbreaking Social SDK at GDC 2025, a free toolkit designed to seamlessly integrate social features into video games.",
-            source: "1redDrop",
-            url: "https://1reddrop.com/2025/03/17/discords-social-sdk-revolutionizing-multiplayer-gaming-in-2025/"
+            title: "Krea AI Launches New Creative Platform",
+            date: "2025-05-15",
+            description: "Krea AI introduces its next-generation creative platform, offering advanced tools for AI-assisted art and design with enhanced collaboration features.",
+            source: "Krea AI",
+            url: "https://krea.ai/2025/05/15/new-platform-launch/"
         }
     ],
     competitions: [
