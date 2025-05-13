@@ -256,10 +256,82 @@ function getCountdownString(targetDate) {
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
+// --- Daily Goal Generator ---
+const dailyGoals = [
+    "Take a 5-minute mindful break.",
+    "Organize your workspace.",
+    "Write down three things you're grateful for.",
+    "Reach out to a colleague or friend.",
+    "Plan your top 3 tasks for tomorrow.",
+    "Drink a glass of water.",
+    "Read a short article on AI.",
+    "Declutter your email inbox.",
+    "Take a short walk.",
+    "Reflect on today's achievements."
+];
+
+function setRandomGoal() {
+    const goalText = document.getElementById('daily-goal-text');
+    const randomGoal = dailyGoals[Math.floor(Math.random() * dailyGoals.length)];
+    goalText.textContent = randomGoal;
+}
+
+function setupDailyGoal() {
+    document.getElementById('new-goal-btn').addEventListener('click', setRandomGoal);
+    setRandomGoal(); // Show a goal on load
+}
+
+// --- Sticky Notes ---
+function getNotes() {
+    return JSON.parse(localStorage.getItem('stickyNotes') || '[]');
+}
+
+function saveNotes(notes) {
+    localStorage.setItem('stickyNotes', JSON.stringify(notes));
+}
+
+function renderNotes() {
+    const notesContainer = document.getElementById('notes-container');
+    notesContainer.innerHTML = '';
+    const notes = getNotes();
+    notes.forEach((note, idx) => {
+        const noteDiv = document.createElement('div');
+        noteDiv.className = 'sticky-note';
+        noteDiv.innerHTML = `
+            <textarea>${note}</textarea>
+            <button class="delete-note-btn" title="Delete">🗑️</button>
+        `;
+        // Edit note
+        noteDiv.querySelector('textarea').addEventListener('input', (e) => {
+            notes[idx] = e.target.value;
+            saveNotes(notes);
+        });
+        // Delete note
+        noteDiv.querySelector('.delete-note-btn').addEventListener('click', () => {
+            notes.splice(idx, 1);
+            saveNotes(notes);
+            renderNotes();
+        });
+        notesContainer.appendChild(noteDiv);
+    });
+}
+
+function setupStickyNotes() {
+    document.getElementById('add-note-btn').addEventListener('click', () => {
+        const notes = getNotes();
+        notes.push('');
+        saveNotes(notes);
+        renderNotes();
+    });
+    renderNotes();
+}
+
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     populateContainers();
     setupDarkModeToggle();
+    setupDailyGoal();
+    setupStickyNotes();
     
     // Add smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

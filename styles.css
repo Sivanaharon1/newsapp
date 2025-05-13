@@ -487,4 +487,161 @@ body.dark-mode #dark-mode-toggle {
 }
 body.dark-mode #dark-mode-toggle:hover {
     color: #fff;
+}
+
+#daily-goal-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#daily-goal-box {
+    background: linear-gradient(135deg, #b983ff 0%, #8e44ad 100%);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(142, 68, 173, 0.15);
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 420px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: box-shadow 0.3s;
+}
+
+#daily-goal-box:hover {
+    box-shadow: 0 8px 32px rgba(142, 68, 173, 0.25);
+}
+
+#daily-goal-text {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    min-height: 2.5em;
+    line-height: 1.4;
+}
+
+#new-goal-btn {
+    background: linear-gradient(90deg, #a084ca 0%, #8e44ad 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem 2.2rem;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(142, 68, 173, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    outline: none;
+}
+
+#new-goal-btn:hover, #new-goal-btn:focus {
+    background: linear-gradient(90deg, #8e44ad 0%, #6c3483 100%);
+    box-shadow: 0 4px 16px rgba(142, 68, 173, 0.25);
+    transform: translateY(-2px) scale(1.04);
+}
+
+#sticky-notes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#sticky-notes-widget {
+    background: linear-gradient(135deg, #f3e9ff 0%, #e0c3fc 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(142, 68, 173, 0.10);
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#add-note-btn {
+    background: linear-gradient(90deg, #a084ca 0%, #8e44ad 100%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 0.7rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(142, 68, 173, 0.12);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    outline: none;
+}
+#add-note-btn:hover, #add-note-btn:focus {
+    background: linear-gradient(90deg, #8e44ad 0%, #6c3483 100%);
+    box-shadow: 0 4px 16px rgba(142, 68, 173, 0.18);
+    transform: translateY(-2px) scale(1.04);
+}
+
+#notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.sticky-note {
+    background: linear-gradient(135deg, #fffbe7 0%, #ffe6fa 100%);
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(142, 68, 173, 0.10);
+    padding: 1rem 1rem 2.2rem 1rem;
+    min-width: 180px;
+    max-width: 220px;
+    min-height: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+.sticky-note:hover {
+    box-shadow: 0 6px 24px rgba(142, 68, 173, 0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+.sticky-note textarea {
+    background: transparent;
+    border: none;
+    resize: none;
+    width: 100%;
+    height: 80px;
+    font-size: 1rem;
+    color: #6c3483;
+    font-family: inherit;
+    outline: none;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+.sticky-note textarea:focus {
+    background: #f3e9ff;
+}
+.delete-note-btn {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.7rem;
+    background: none;
+    border: none;
+    color: #8e44ad;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0.2rem;
+}
+.delete-note-btn:hover {
+    color: #c0392b;
 } 
