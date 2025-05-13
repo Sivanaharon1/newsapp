@@ -128,6 +128,10 @@ function populateNews() {
     data.news.forEach(news => {
         const card = document.createElement('div');
         card.className = 'card';
+        let countdownHTML = '';
+        if (new Date(news.date) > new Date()) {
+            countdownHTML = `<div class="countdown" data-date="${news.date}"></div>`;
+        }
         card.innerHTML = `
             <h3>${news.title}</h3>
             <div class="news-meta">
@@ -135,9 +139,24 @@ function populateNews() {
                 <span>${news.source}</span>
             </div>
             <div class="description">${news.description}</div>
+            ${countdownHTML}
             <a href="${news.url}" target="_blank" rel="noopener noreferrer" class="read-more">Read more →</a>
         `;
         newsContainer.appendChild(card);
+    });
+    // Start countdown timers
+    startCountdowns();
+}
+
+function startCountdowns() {
+    const countdowns = document.querySelectorAll('.countdown');
+    countdowns.forEach(el => {
+        const date = el.getAttribute('data-date');
+        function update() {
+            el.textContent = 'Countdown: ' + getCountdownString(date);
+        }
+        update();
+        setInterval(update, 1000);
     });
 }
 
@@ -208,9 +227,39 @@ function populateContainers() {
     populateNews();
 }
 
+// Dark mode toggle
+function setupDarkModeToggle() {
+    const btn = document.getElementById('dark-mode-toggle');
+    btn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const icon = btn.querySelector('i');
+        if (document.body.classList.contains('dark-mode')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    });
+}
+
+// Countdown helper
+function getCountdownString(targetDate) {
+    const now = new Date();
+    const end = new Date(targetDate);
+    const diff = end - now;
+    if (diff <= 0) return 'Started!';
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
 // Initialize the application
 document.addEventListener('DOMContentLoaded', () => {
     populateContainers();
+    setupDarkModeToggle();
     
     // Add smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
