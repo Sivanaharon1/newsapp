@@ -3,82 +3,113 @@ const data = {
     news: [
         {
             id: 1,
-            title: "OpenAI Announces GPT-5 Development",
-            date: "2024-03-15",
-            description: "OpenAI has begun development of GPT-5, promising significant improvements in reasoning and safety.",
-            source: "AITrends",
-            url: "https://aitrends.com/gpt5"
+            title: "Google Gemini Takes Personalization to the Next Level",
+            date: "2024-03-13",
+            description: "Google's latest update to the Gemini app introduces groundbreaking personalization features that promise to make Gemini a tailored extension of its users.",
+            source: "1redDrop",
+            url: "https://1reddrop.com/2025/03/13/google-gemini-takes-personalization-to-the-next-level-a-game-changer-in-ai-technology/"
         },
         {
             id: 2,
-            title: "Google Launches Gemini Pro 1.5",
-            date: "2024-03-14",
-            description: "Google's latest AI model shows remarkable improvements in multimodal capabilities.",
-            source: "AITrends",
-            url: "https://aitrends.com/gemini"
+            title: "Honor's $10 Billion AI Investment",
+            date: "2024-03-02",
+            description: "Chinese smartphone manufacturer Honor announces a $10 billion investment in artificial intelligence over the next five years, signaling a transition to an AI device ecosystem company.",
+            source: "1redDrop",
+            url: "https://1reddrop.com/2025/03/02/honors-10-billion-ai-gamble-a-bold-leap-or-a-risky-bet/"
         },
         {
             id: 3,
-            title: "AI in Marketing: 2024 Trends Report",
-            date: "2024-03-13",
-            description: "New report reveals how AI is transforming marketing strategies across industries.",
-            source: "Marketing AI Institute",
-            url: "https://marketingaiinstitute.com/trends"
+            title: "Anthropic's $61.5 Billion Valuation",
+            date: "2024-03-03",
+            description: "Anthropic, an Amazon-backed AI startup, secures $3.5 billion in funding, reaching a $61.5 billion valuation, intensifying the AI arms race.",
+            source: "1redDrop",
+            url: "https://1reddrop.com/2025/03/03/anthropics-61-5-billion-valuation-the-ai-arms-race-intensifies/"
         },
         {
             id: 4,
-            title: "The Future of AI-Powered Customer Experience",
-            date: "2024-03-12",
-            description: "How AI is revolutionizing customer service and personalization in marketing.",
-            source: "Marketing AI Institute",
-            url: "https://marketingaiinstitute.com/cx"
+            title: "Discord's Social SDK Revolution",
+            date: "2024-03-17",
+            description: "Discord unveils its groundbreaking Social SDK at GDC 2025, a free toolkit designed to seamlessly integrate social features into video games.",
+            source: "1redDrop",
+            url: "https://1reddrop.com/2025/03/17/discords-social-sdk-revolutionizing-multiplayer-gaming-in-2025/"
         }
     ],
     competitions: [
         {
             id: 1,
-            title: "AI Video Creation Competition",
-            date: "2024-04-15",
-            description: "International competition for creating short videos using AI",
-            tags: ["Video", "AI", "Competition"],
+            title: "AI Skills Fest Challenge",
+            date: "2024-05-01",
+            description: "Microsoft's global AI challenge focusing on practical AI skills and real-world applications. Open to developers and AI enthusiasts worldwide.",
+            tags: ["AI", "Skills", "Microsoft", "Challenge"],
             prize: "$10,000",
-            deadline: "2024-05-15",
-            platform: "Kaggle",
+            deadline: "2024-06-30",
+            platform: "Microsoft Learn",
             location: "Online"
         },
         {
             id: 2,
-            title: "AI Image Generation Challenge",
-            date: "2024-04-01",
-            description: "Create a series of artistic images using AI",
-            tags: ["Images", "AI", "Art"],
-            prize: "$5,000",
-            deadline: "2024-04-30",
-            platform: "Devpost",
-            location: "San Francisco, CA"
+            title: "Gen48 AI Film Festival",
+            date: "2024-05-15",
+            description: "Runway's annual AI film festival showcasing the best in AI-generated and AI-assisted filmmaking. Open to filmmakers using AI tools in their creative process.",
+            tags: ["Film", "AI", "Festival", "Runway"],
+            prize: "$25,000",
+            deadline: "2024-06-15",
+            platform: "Runway",
+            location: "Global"
+        },
+        {
+            id: 3,
+            title: "ARC Prize Challenge",
+            date: "2024-05-20",
+            description: "Open competition to develop AI systems that can solve ARC (Abstraction and Reasoning Corpus) tasks, pushing the boundaries of AI reasoning.",
+            tags: ["AI", "Research", "Competition"],
+            prize: "$100,000",
+            deadline: "2024-06-20",
+            platform: "ARC Prize",
+            location: "Online"
         }
     ],
     challenges: [
         {
             id: 1,
-            title: "AI Animation Challenge",
-            date: "2024-04-10",
-            description: "Create a short animation using AI tools",
-            tags: ["Animation", "AI", "Challenge"],
+            title: "AI Good Global Challenge",
+            date: "2024-05-10",
+            description: "Three parallel competitions focusing on AI for social good, including healthcare, education, and environmental sustainability.",
+            tags: ["AI", "Social Good", "Healthcare", "Education"],
+            duration: "45 days",
+            platform: "AI Good",
+            location: "Global"
+        },
+        {
+            id: 2,
+            title: "Krea AI Creative Challenge",
+            date: "2024-05-25",
+            description: "Monthly creative challenge using Krea AI's latest image generation technology. Theme: 'Future of Human-AI Collaboration'",
+            tags: ["AI", "Art", "Krea", "Creative"],
             duration: "30 days",
-            platform: "Discord Community",
+            platform: "Krea AI",
             location: "Online"
         }
     ],
     calls: [
         {
             id: 1,
-            title: "AI Project Call",
-            date: "2024-04-05",
-            description: "Looking for artists to work on a new AI project",
-            tags: ["Project", "AI", "Opportunity"],
-            type: "Collaboration",
-            platform: "LinkedIn",
+            title: "Artificial Muse Residency",
+            date: "2024-05-15",
+            description: "Artist residency program in Vancouver focusing on AI and art. Seeking artists working at the intersection of artificial intelligence and creative expression.",
+            tags: ["Residency", "AI", "Art", "Vancouver"],
+            type: "Residency",
+            platform: "France Canada Culture",
+            location: "Vancouver, Canada"
+        },
+        {
+            id: 2,
+            title: "Runway Creative Partners Program",
+            date: "2024-05-20",
+            description: "Open call for creative professionals to join Runway's partner program. Looking for filmmakers, artists, and creators using AI in their work.",
+            tags: ["Partnership", "AI", "Creative", "Runway"],
+            type: "Partnership",
+            platform: "Runway",
             location: "Remote"
         }
     ]
